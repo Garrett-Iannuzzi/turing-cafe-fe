@@ -1,0 +1,14 @@
+form {
+  border: solid 3px black;
+  background-color: white;
+  display: flex;
+  height: 13em;
+  flex-direction: column;
+  padding: 1em;
+  width: 35%
+}
+
+.make-res-btn {
+  cursor: pointer;
+  margin-top: .5em;
+}
