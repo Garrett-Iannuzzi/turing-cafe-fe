@@ -1,16 +1,12 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import App from '../App/App';
+import ReservationCard from '../ReservationCard/ReservationCard';
 
-describe('App', () => {
+describe('ReservationCard', () => {
 
   it('Should match the snapshot with the correct data', () => {
-    const wrapper = shallow(<App />)
+    const wrapper = shallow(<ReservationCard />)
 
     expect(wrapper).toMatchSnapshot()
-  })
-
-
-
-
-})
+  });
+});
