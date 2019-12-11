@@ -17,8 +17,31 @@ class App extends Component {
       .then(reservations => this.setState({ reservations }))
   }
 
+  // addPost = (reservation) => {
+  //  const post = { 
+  //     method: 'POST',
+  //     body: JSON.stringify({
+  //       id: reservation.id,
+  //       name: reservation.name,
+  //       date: reservation.date,
+  //       time: reservation.time,
+  //       number: reservation.number
+  //     }),
+  //     headers: {
+  //       'Content-Type': 'application/json'  
+  //     }
+  //   }
+  //   return fetch('http://localhost:3001/api/v1/reservations', options)
+  //   .then(response => {
+  //     if(!response.ok) {
+  //       throw Error('Error posting')
+  //     }
+  //     return res.json()})
+  // }
+
   handleAddReservation = (newRes) => {
     this.setState({ reservations: [...this.state.reservations, newRes] })
+    // this.addPost(newRes)
   }
 
   render() {
