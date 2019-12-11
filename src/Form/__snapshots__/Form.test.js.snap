@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form Should match the snapshot with the correct data 1`] = `
+<form>
+  <label>
+    Name:
+  </label>
+  <input
+    className="input-1"
+    name="name"
+    onChange={[Function]}
+    value=""
+  />
+  <label>
+    Date:
+  </label>
+  <input
+    className="input-2"
+    name="date"
+    onChange={[Function]}
+    placeholder="mm/dd"
+    value=""
+  />
+  <label>
+    Time:
+  </label>
+  <input
+    className="input-3"
+    name="time"
+    onChange={[Function]}
+    value=""
+  />
+  <label>
+    Number of Guests:
+  </label>
+  <input
+    className="input-4"
+    name="number"
+    onChange={[Function]}
+    value={0}
+  />
+  <button
+    className="make-res-btn"
+    onClick={[Function]}
+  >
+    Make Res!
+  </button>
+</form>
+`;
+
+exports[`ReservationCard Should match the snapshot with the correct data 1`] = `
+<article>
+  <h1
+    className="article-h1"
+  >
+    Name: 
+  </h1>
+  <h2
+    className="article-h2"
+  >
+    Date: 
+  </h2>
+  <h3
+    className="article-h3"
+  >
+    Time: 
+  </h3>
+  <h3
+    className="article-h4"
+  >
+    Number of guests: 
+  </h3>
+</article>
+`;
