@@ -24,7 +24,6 @@ class Form extends Component {
     e.preventDefault()
     const newRes = { id: Date.now(), ...this.state }
     this.props.handleAddReservation(newRes)
-    this.props.handleAddPost(newRes)
     this.resetInputs()
   }
 
