@@ -17,31 +17,31 @@ class App extends Component {
       .then(reservations => this.setState({ reservations }))
   }
 
-  // addPost = (reservation) => {
-  //  const post = { 
-  //     method: 'POST',
-  //     body: JSON.stringify({
-  //       id: reservation.id,
-  //       name: reservation.name,
-  //       date: reservation.date,
-  //       time: reservation.time,
-  //       number: reservation.number
-  //     }),
-  //     headers: {
-  //       'Content-Type': 'application/json'  
-  //     }
-  //   }
-  //   return fetch('http://localhost:3001/api/v1/reservations', options)
-  //   .then(response => {
-  //     if(!response.ok) {
-  //       throw Error('Error posting')
-  //     }
-  //     return res.json()})
-  // }
+  handleAddPost = (reservation) => {
+   const post = { 
+      method: 'POST',
+      body: JSON.stringify({
+        id: reservation.id,
+        name: reservation.name,
+        date: reservation.date,
+        time: reservation.time,
+        number: reservation.number
+      }),
+      headers: {
+        'Content-Type': 'application/json'  
+      }
+    }
+    return fetch('http://localhost:3001/api/v1/reservations', post)
+    .then(response => {
+      if(!response.ok) {
+        throw Error('Error posting')
+      }
+      return response.json()})
+  }
 
   handleAddReservation = (newRes) => {
     this.setState({ reservations: [...this.state.reservations, newRes] })
-    // this.addPost(newRes)
+    this.handleAddPost(newRes)
   }
 
   render() {
@@ -49,6 +49,7 @@ class App extends Component {
       <main className='app'>
         <h1 className='app-title'>Turing Cafe!</h1>
         <Form
+          handleAddPost={this.handleAddPost}
           handleAddReservation={this.handleAddReservation}
         />
         <ReservationContainer

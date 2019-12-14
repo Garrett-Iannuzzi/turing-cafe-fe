@@ -1,6 +1,7 @@
 article {
   border: solid 3px black;
   background-color: white;
+  height: 30%;
   padding: 10px;
   margin: 2px;
 }

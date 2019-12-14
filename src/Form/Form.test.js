@@ -30,11 +30,11 @@ describe('Form', () => {
 
   it('Should call resetInputs when button is clicked', () => {
     const mockHandleAddReservation = jest.fn();
-    const mockResetInputs = jest.fn()
     const mockEvent = { preventDefault: jest.fn() };
     const wrapper = shallow(<Form handleAddReservation={mockHandleAddReservation} />);
+    wrapper.instance().resetInputs = jest.fn();
 
     wrapper.find('button').simulate('click', mockEvent);
-    expect(mockResetInputs).toHaveBeenCalledTimes(1);
+    expect(wrapper.instance().resetInputs).toHaveBeenCalledTimes(1);
   });
 });
